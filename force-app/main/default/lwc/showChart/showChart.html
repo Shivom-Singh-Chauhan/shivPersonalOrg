@@ -1,0 +1,15 @@
+<template>
+	<lightning-card title={heading} icon-name="utility:chart">
+		<div class="slds-grid slds-wrap slds-grid--pull-padded">
+			<div if:true={isChartJsInitialized} class="slds-col--padded slds-size--1-of-1">
+				<canvas class="doughnut" lwc:dom="manual"></canvas>
+			</div>
+			<div if:false={isChartJsInitialized} class="slds-col--padded slds-size--1-of-1">
+				ChartJs Not loaded yet
+			</div>
+			<div class="slds-col--padded slds-size--1-of-1">
+				{footerDecription}
+			</div>
+		</div>
+	</lightning-card>
+</template>

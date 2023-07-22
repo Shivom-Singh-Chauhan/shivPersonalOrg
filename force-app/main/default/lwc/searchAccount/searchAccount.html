@@ -1,0 +1,12 @@
+<template>
+    <lightning-input type="text" variant="standard" name="getAccount" label="Get Type" placeholder="type here..." onchange={handleInput}></lightning-input>
+    <lightning-button variant="brand" label="Get Record" title="titleName" onclick={handleGetRecord}></lightning-button>
+
+    <lightning-datatable
+        key-field="Id"
+                data={account}
+                show-row-number-column
+                columns={columns}
+                onsave={handleSave}>
+    </lightning-datatable>
+</template>

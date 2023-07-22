@@ -1,0 +1,31 @@
+<template>
+  <!--<c-child-comp onsendaccount={getAccountName}></c-child-comp>
+    <div style="height: 300px;">
+        <lightning-datatable
+                key-field="Id"
+                data={accList.data}
+                columns={columns}>
+        </lightning-datatable>
+    </div> -->
+    {totalInput}
+    <lightning-input id="Num" type="number" variant="standard" name="Nuber" label="Number" placeholder="type here..." onchange={getNumChange}></lightning-input>
+    <!-- <lightning-button variant="brand" label="Get More Fields" title="sum" onclick={handleGetMoreFields}></lightning-button>
+     -->
+
+    <lightning-input id="first" type="number" variant="standard" name="input1" label="First NUmber" placeholder="type here..." onchange={FirstChange}></lightning-input>
+    <lightning-input id="second" type="number" variant="standard" name="input2" label="Second NUmber" placeholder="type here..." onchange={SecondChange}></lightning-input>
+
+    <template for:each={arr} for:item="ar">
+        <!-- <option key={ar}> -->
+                  <lightning-input key={ar} type="number" variant="standard" name="input1" label="Number" placeholder="type here..." onchange={getChange}></lightning-input>
+                  <!-- </option> -->
+              </template>      
+
+
+      <lightning-button variant="brand" label="Sum" title="sum" onclick={handleSum}></lightning-button>
+      <lightning-button variant="brand" label="Subtract" title="Subtract" onclick={handleSubtract}></lightning-button>
+      <lightning-button variant="brand" label="Multiply" title="Multiply" onclick={handleMultiply}></lightning-button>
+      <lightning-button variant="brand" label="Divide" title="Divide" onclick={handleDivide}></lightning-button>
+
+      {result}
+</template>

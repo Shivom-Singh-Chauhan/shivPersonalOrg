@@ -1,0 +1,75 @@
+<template>
+	<template if:true={records}>
+		<lightning-card title={heading} icon-name="custom:custom63">
+			<template if:false={dataToShowOnTemplate}>
+				<lightning-button variant="base" label="New" title="NewRecord" onclick={createNew}></lightning-button>
+			</template>
+
+			<div style="height: 300px;">
+				<table aria-multiselectable="true"
+					class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" role="grid"
+					aria-label="Example advanced table of Opportunities with header menu button">
+					<thead>
+						<tr class="slds-line-height_reset">
+							<template for:each={fieldset} for:item="field">
+							<th key={field} aria-label={field} aria-sort="none"
+								class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+								<a class="slds-th__action slds-text-link_reset" href="#" role="button" tabindex="-1">
+									<div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+										<span class="slds-truncate" title={field}>{field}</span>
+										<span class="slds-icon_container slds-icon-utility-arrowdown"></span>
+									</div>
+								</a>
+							</th>
+							</template>
+							<th key={field} aria-label={field} aria-sort="none"
+								class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+								<a class="slds-th__action slds-text-link_reset" href="#" role="button" tabindex="-1">
+									<div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+										<span class="slds-truncate" title="Action"></span>
+										<span class="slds-icon_container slds-icon-utility-arrowdown"></span>
+									</div>
+								</a>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<template for:each={dataToShowOnTemplate} for:item="eachRec">
+						<tr key={eachRec} aria-selected="false" class="slds-hint-parent">
+							<template  for:each={eachRec} for:item="rec">
+							<td key={field} role="gridcell">
+								<div class="slds-truncate" title="Acme">{rec}</div>
+							</td>
+							</template>
+							<td class="slds-cell_action-mode" role="gridcell">
+								<lightning-button-icon name ={eachRec} onclick={callRowAction} icon-class="slds-icon-text-error" icon-name="utility:delete"    variant="border-filled" alternative-text="Delete"  class="slds-m-left_xx-small" title="Delete"></lightning-button-icon>
+            					<lightning-button-icon name ={eachRec} onclick={callRowAction} icon-name="utility:edit"   variant="border-filled" alternative-text="Edit" class="slds-m-left_xx-small" title="Edit"></lightning-button-icon>
+							</td>
+						</tr>
+						</template>
+					</tbody>
+				</table>
+			</div>
+		</lightning-card>
+
+		<c-edit-modal class='edit-Modal' edit-record="Account" modal-header={objectApiName} onmodalclose={modalclose}
+			show-header show-footer>
+			<div slot="body" class="slds-p-around_medium">
+				<lightning-layout>
+					<lightning-layout-item size="12">
+						<template for:each={fieldsetvalues} for:item="fieldset">
+							<lightning-input key={fieldset.field} type="text" variant="standard" name="name"
+								label={fieldset.field} value={fieldset.value} onchange={changeHandle}></lightning-input>
+						</template>
+					</lightning-layout-item>
+				</lightning-layout>
+			</div>
+			<div slot="footer">
+				<lightning-button onclick={modalclose} label="Close"
+					class="close-button slds-m-horizontal_medium"></lightning-button>
+				<lightning-button onclick={updateRecord} label="Save" variant="brand"
+					class="save-button"></lightning-button>
+			</div>
+		</c-edit-modal>
+	</template>
+</template>

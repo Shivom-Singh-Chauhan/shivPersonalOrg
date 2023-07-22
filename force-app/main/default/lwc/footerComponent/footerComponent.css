@@ -1,0 +1,347 @@
+@media screen and (min-width: 425px){
+	.textArea {
+		margin-left: 1.5rem;
+  position: absolute;
+  top: 55rem;
+ margin-top: 2.1rem;
+  height: 10rem;
+  width: 35rem;
+  
+}
+
+.usedImage{
+ height :100%; 
+ width:100%;
+}
+.usedImageMobile{
+ display: none;
+}
+
+.headArea{
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 1.8rem;
+margin-left: 1.3rem;
+
+
+color: #000000;
+
+}
+
+.headAreaMobile{
+  display: none;
+}
+
+.useCode{
+    font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+margin-top: 1rem;
+font-size: 1.5rem;
+text-align: left;
+margin-left: 1.3rem;
+color: #000000;
+}
+.everythingOnline{
+  font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 1.5rem;
+color: #000000;
+text-align: left;
+margin-left: 1.3rem;
+margin-top: -0.3rem;
+}
+
+.cleanWater{
+  font-size: 1.5rem;
+ 
+  color:#33ccff;
+  font-weight: bold;
+}
+
+.shopNow{
+  border: none;
+  background-color:  #27AAF2;
+  color: white;
+ border-radius: 1rem;
+  font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.3rem 2rem;
+    float: left;
+    margin-left: 1.3rem;
+    margin-top: 1.3rem;
+}
+@font-face{
+	font-family: "RalewayFont";
+	src: url('/resource/RalewayFont');
+}
+
+	
+
+
+
+	.maindiv{
+		background-size:143%;
+	}
+	.dummy {
+	color: white;
+	    font-family: Raleway;
+}
+.css-1bv4i8 {
+	margin-left: 7rem;
+	margin-top: 5.2rem;
+}
+
+.chakra-container {
+	padding: 10%;
+	    font-family: Raleway;
+}
+
+.css-150wz6w {
+	fill: #7CD6F5;
+	width: 20px;
+	height: 20px;
+	    font-family: Raleway;
+}
+
+.css-sc2lan {
+	margin-top: 14rem;
+	padding-top: 19rem;
+	height: 45rem;
+	color: white;
+	padding-left: 8%;
+	    font-family: Raleway;
+		font-size: inherit;
+}
+
+.css-tkixya {
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 100%;
+	width: 64px;
+	height: 64px;
+	align-items: center;
+	display: flex;
+	    font-family: Raleway;
+}
+
+.css-7822g1 {
+	width: 90%;
+	    font-family: Raleway;
+}
+
+.css-qeyqtt {
+	width: 125%;
+	    font-family: Raleway;
+		margin-left: 0.8rem;
+		
+}
+
+.chakra-input {
+	border: white;
+	border-bottom-left-radius: 7px;
+	border-top-left-radius: 7px;
+	padding: 9px;
+	font-size: 21px;
+	    font-family: Raleway;
+
+}
+
+.css-1nsrk2x {
+	display: inline-flex;
+	appearance: none;
+	align-items: center;
+	position: relative;
+	white-space: nowrap;
+	vertical-align: middle;
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+	line-height: 1.2;
+	background: #27aaf2;
+	    font-family: Raleway;
+}
+
+.css-14yjdhd {
+	font-size: 130%;
+	    font-family: Raleway;
+}
+
+.chakra-button {
+	border: white;
+	border-bottom-right-radius: 7px;
+	border-top-right-radius: 7px;
+	padding: 9px;
+	font-size: 21px;
+	    font-family: Raleway;
+
+}
+
+.css-f4h6uy {
+	padding: 2%;
+	    font-family: Raleway;
+}
+
+.css-7822g1 {
+	padding: 2%;
+	font-size: 19px;
+	    font-family: Raleway;
+}
+
+.css-qeyqtt {
+	
+	font-size: 16px;
+	margin-bottom: 12rem;
+	    font-family: Raleway;
+}
+
+.css-0 {
+	padding: 2%;
+	font-size: 153%;
+	    font-family: Raleway;
+		width: 13rem;
+}
+
+a {
+	color: white;
+	    font-family: Raleway;
+}
+
+.footerImage{
+	position: relative;
+	z-index: -1;
+	margin-bottom: -32rem
+}
+
+@font-face{
+	font-family: "RalewayFont";
+	src: url('/resource/RalewayFont');
+}
+.mobileView{
+	display: none;
+}
+.FooterButton{
+	padding-top: 5rem;
+}
+
+}
+@media screen and (max-width: 425px){
+
+
+	.textArea {
+  position: absolute;
+      top: 48rem;
+  height: 9.45rem;
+  width: 18rem;
+  margin-left: 2.8rem;
+  
+}
+
+.usedImage{
+  display: none;
+}
+
+.usedImageMobile{
+  height :100%; 
+ width:100%;
+}
+.headArea{
+display: none;
+}
+
+.headAreaMobile{
+  font-family: 'Raleway';
+font-style: normal;
+font-weight: 500;
+font-size: 1.1rem;
+/* margin-left: 1rem; */
+text-align: center;
+color: #000000;
+}
+
+.useCode{
+    font-family: 'Raleway';
+font-style: normal;
+font-weight: 500;
+margin-top: 1rem;
+font-size: 1rem;
+text-align: center;
+
+color: #000000;
+}
+.everythingOnline{
+  font-family: 'Raleway';
+font-style: normal;
+font-weight: 500;
+font-size: 1rem;
+color: #000000;
+text-align: center;
+
+margin-top: -0.3em;
+}
+
+.cleanWater{
+
+  font-size: 1rem;
+  color:#33ccff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.shopNow{
+  border: none;
+  background-color: #27AAF2;
+  color: white;
+ border-radius: 1rem;
+  font-size: 1.4em;
+    font-weight: bold;
+    padding: 0.3em 2.1em;
+    float: left;
+    margin-left: 2.9em;
+    margin-top: 1.3em;
+}
+@font-face{
+	font-family: "RalewayFont";
+	src: url('/resource/RalewayFont');
+}
+	
+	.FooterButton{
+		margin-top: 3.4rem;
+	}
+	.maindiv{
+		background-size:151%;
+	}
+	.css-sc2lan{
+		display: none;
+	}
+	.footerImage{
+	 position: relative; 
+	z-index: -1;
+	/* margin-bottom: -7rem; */
+	    
+	 margin-bottom: -7rem; 
+}
+.mobileFooter{
+	padding-top: 4rem;
+	color: white;
+}
+.mobileView{
+	text-align: center;
+	color: white;
+	font-size: 0.7rem;
+	height: 13rem;
+}
+@font-face{
+	font-family: "RalewayFont";
+	src: url('/resource/RalewayFont');
+}
+
+}
+
+
+/* @media only screen and (max-width: 3000px) and (min-width: 2000px){
+	.footerImage{
+		position: relative ;
+		z-index: -1 ;
+	} */

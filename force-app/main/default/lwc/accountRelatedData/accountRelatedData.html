@@ -1,0 +1,54 @@
+<template >
+	<div style="background-color: white;">
+	<lightning-combobox name="accountList" label="Account" value={values} placeholder="Select Account"
+		options={accountOptions} onchange={selectAccountHandle}></lightning-combobox>
+		<template if:true={values}>
+			<lightning-button style="text-align:right;" variant="brand" label="Show Chart View" title="ShowChartView"
+				onclick={handleShowChart}></lightning-button>
+			<lightning-button style="text-align:left;" variant="brand" label="Show Table View" title="ShowTableView"
+				onclick={handleShowChart}></lightning-button>
+		<template if:false={showChart}>
+			<div class="slds-grid slds-gutters">
+				<div class="slds-col">
+			<template if:true={showContact}>
+				<c-show-data-in-data-table  records={contactList} heading="Related Contact" object-api-name="Contact"></c-show-data-in-data-table>
+			</template>
+				</div>
+				<div class="slds-col">
+			<template if:true={showOpportunity}>
+				<c-show-data-in-data-table records={opportunityList} heading="Related Opportunity" object-api-name="Opportunity">
+				</c-show-data-in-data-table>
+			</template>
+				</div>
+			</div>
+		</template>
+
+		<template if:true={showChart}>
+			
+			<div class="slds-grid slds-gutters">
+				<div class="slds-col slds-size_1-of-3">
+                        <c-show-chart heading="Gross Revenue"
+                      sub-heading="Total Gross Revenue"
+                      record-labels={accountNamesForChart}
+                      record-data={grossRevenueForChart}
+                      footer-decription="This Chart is Shown By Data Presented in Org" ></c-show-chart>
+				</div>
+				<div class="slds-col slds-size_1-of-3">
+					<c-show-chart heading="Contact Revenue"
+                      sub-heading="Total Contact Revenue"
+                      record-labels={contactNamesForChart}
+                      record-data={contactRevenueForChart}
+                      footer-decription="This Chart is Shown By Data Presented in Org" ></c-show-chart>
+				</div>
+				<div class="slds-col slds-size_1-of-3">
+					<c-show-chart heading="Opportunity Revenue"
+                      sub-heading="Total Opportunity Revenue"
+                      record-labels={opportunityNamesForChart}
+                      record-data={opportunityRevenueForChart}
+                      footer-decription="This Chart is Shown By Data Presented in Org" ></c-show-chart>
+				</div>
+			</div>
+		</template>
+		</template>
+		</div>
+	</template>

@@ -1,0 +1,28 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name="Name" type="String" />
+    <aura:attribute name="FullName" type="String" />
+    <aura:attribute name="EditString" type="String" />
+    
+    
+    <lightning:messageChannel
+        type="channelForAuraLWC__c"
+        aura:id="channelForAuraLWC"
+        onMessage="{!c.handleMessage}"
+    />
+    
+    <lightning:input name="FullName" label="Enter some text" value="{!v.FullName}" />
+    <lightning:button variant="brand" label="Send to LWC" title="Base action" onclick="{! c.handleClick }"/>
+    
+    <h1>
+        Your Name is {!v.Name}
+    </h1>
+    
+    
+    <lightning:input name="Edit String" label="Enter some text" value="{!v.EditString}" />
+    <lightning:button variant="brand" label="Edit to LWC" title="Base action" onclick="{! c.handleEdit }"/>
+    
+  <!--  <c:publishAndSubscribe aura:id="publishAndSubscribe"></c:publishAndSubscribe> -->
+    
+    
+</aura:component>
